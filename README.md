@@ -7,10 +7,6 @@ This repository contains the code of the paper
 >
 >ICCV2023
 
-Our codes are based on the following repositories: [CSWin Transformer](https://github.com/microsoft/CSWin-Transformer), [Panoformer](https://github.com/zhijieshen-bjtu/PanoFormer), [MiDaS](https://github.com/isl-org/MiDaS), [Pano3D](https://github.com/VCL3D/Pano3D).
-
-We'd like to thank the authors and users providing the codes.
-
 **Codes, instructions, citations, etc. will be uploaded soon after the conference.**
 
 ## :blue_book: Experiment Report 
