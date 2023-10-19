@@ -19,7 +19,7 @@ import torch.utils.data
 from skimage.transform import rescale,resize
 
 class S3D_loader(data.Dataset):
-    def __init__(self,root,transform = None,transform_t = None, train = True):
+    def __init__(self,root,transform = None,transform_t = None):
             "makes directory list which lies in the root directory"
             if True:
                 dir_path = list(map(lambda x:os.path.join(root,x),os.listdir(root)))
@@ -49,7 +49,6 @@ class S3D_loader(data.Dataset):
 
                 self.transform = transform
                 self.transform_t = transform_t
-                self.train = train
 
     def __getitem__(self,index):
            
@@ -74,9 +73,9 @@ class S3D_loader(data.Dataset):
 
 
 class Sample_loader(data.Dataset):
-    def __init__(self,root,transform = None,transform_t = None, train = True,KITTI = True):
+    def __init__(self,root,transform = None,transform_t = None):
             "makes directory list which lies in the root directory"
-            if KITTI:
+            if True:
                 dir_path = list(map(lambda x:os.path.join(root,x),os.listdir(root)))
                 self.image_paths = []
                 self.depth_paths = []
@@ -94,12 +93,10 @@ class Sample_loader(data.Dataset):
                 self.image_paths.sort()
                 self.transform = transform
                 self.transform_t = transform_t
-                self.train = train
-                self.KITTI = KITTI
 
     def __getitem__(self,index):
            
-        if self.KITTI == True:
+        if True:
             
             image_path = self.image_paths[index]
                 
