@@ -1,7 +1,7 @@
 # EGformer
 
 This repository contains the code of the paper 
->["EGformer: Equirectangular geometry-biased transformer for 360 monocular depth estimation."](https://arxiv.org/abs/2304.07803)  
+>["EGformer: Equirectangular geometry-biased transformer for 360 depth estimation."](https://arxiv.org/abs/2304.07803)  
 >
 >Ilwi Yun, Chanyong Shin, Hyunku Lee, Hyuk-Jae Lee, Chae Eun Rhee.
 >
