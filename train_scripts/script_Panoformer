@@ -1,0 +1,25 @@
+python3 main.py \
+--model_name ./checkpoints/Panoformer \
+--S3D_path /YOUR_DATA_PATH/Structured3D/train \
+--batch_size 4 \
+--val_path ./EVAL_SAMPLE/ \
+--num_epochs 50 \
+--lr 5e-5 \
+--eval_crop_ratio 0 \
+--checkpoint_path ./pretrained_models/Panoformer_pretrained.pkl \
+--world_size 1 \
+--rank 0 \
+--dist-url tcp://127.0.0.1:9993 \
+--gpu 0,1,2,3 \
+--backbone Panoformer \
+--train_set S3D \
+--Continue \
+--load_convonly \
+--valid_path /YOUR_DATA_PATH/Structured3D/val \
+#--wandb \
+#--wandb_name 'Panoformer' \
+#--wandb_project 'YOUR_PROJECT_NAME' \
+#--wandb_entity 'YOUR_ENTITY' \
+
+
+
