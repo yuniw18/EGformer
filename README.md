@@ -16,7 +16,8 @@ We'd like to thank the authors providing the codes.
 ## Changelog
 
 [23/09/27] Initialize repo & upload experiment report.<br> 
-[23/10/18] Upload inference/evaluation codes.
+[23/10/18] Upload inference/evaluation codes.<br> 
+[23/11/06] Upload training codes.
 
 ## :blue_book: Experiment Report 
 To check the reproducibility, we re-trained some models in the paper under slightly different environment, and log the training progress of them. 
@@ -132,15 +133,38 @@ OPENCV_IO_ENABLE_OPENEXR=1 bash scripts/eval_script
 
 🔔 NOTE: Sigmoid activation function is added at the output layer of Panoformer unlike the original version. Details can be found in [:blue_book: ***EGformer Report***](https://api.wandb.ai/links/yuniw/21nqqyl8).
 
+## 4. Training
 
+#### 1) Run the scripts in 'train_scripts' folder to reproduce EGformer/Panoformer results in [:blue_book: ***EGformer Report***](https://api.wandb.ai/links/yuniw/21nqqyl8).
+
+
+To train EGformer, do 
+
+~~~bash
+bash train_scripts/script_EGformer
+~~~
+after modifying the script according to your experimental environment.
+
+Then, you will get similar EGformer/Panoformer results in [:blue_book: ***EGformer Report***](https://api.wandb.ai/links/yuniw/21nqqyl8).
+
+🔔 NOTE: Training environment is slightly different with the paper. However, as shown in EGformer_report, similar results will be obtained.
+
+🔔 NOTE: As discussed in the [Technical Appendix](https://openaccess.thecvf.com/content/ICCV2023/supplemental/Yun_EGformer_Equirectangular_Geometry-biased_ICCV_2023_supplemental.pdf), we failed to train some models from the scratch under our experimental setup. 
+Therefore, we initilize the weights of convolution layers in EGformer/Panoformer by utilizing their pre-trained models. 
+
+#### 2) Modify the scripts or model codes to reproduce other results in [:blue_book: ***EGformer Report***](https://api.wandb.ai/links/yuniw/21nqqyl8) or others. 
+For example, to train using (S3D + Pano3D) data, set 'train_set' configuration as 'Concat'.
+
+🔔 NOTE: Current cleaned training codes are not tested for all cases. Let us know if there is any problem. Thank you.
 
 
 ## To do list
 - [x] Experiment report  
 - [x] Code for inference  
 - [x] Code for evaluation 
-- [ ] Code for training
-
+- [x] Code for training
+- [ ] Update codes & others for better usability + discussions.
+      
 ## Citation
 ```
 @InProceedings{Yun_2023_ICCV,
