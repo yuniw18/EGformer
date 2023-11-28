@@ -193,6 +193,7 @@ class PanoformerBlock(nn.Module):
         x = self.norm1(x)
         x = x.view(B, H, W, C)
         # W-MSA/SW-MSA
+        self.ref_point = self.ref_point.cuda(x.get_device())
         x = self.dattn(x, x.unsqueeze(0), self.ref_point.repeat(B, 1, 1, 1, 1))  # nW*B, win_size*win_size, C
 
         x = x.view(B, H * W, C)
