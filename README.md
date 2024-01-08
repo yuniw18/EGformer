@@ -17,8 +17,8 @@ We'd like to thank the authors providing the codes.
 
 [23/09/27] Initialize repo & upload experiment report.<br> 
 [23/10/18] Upload inference/evaluation codes.<br> 
-[23/11/06] Upload training codes.
-
+[23/11/06] Upload training codes.<br> 
+[24/01/08] Upload visualization code. 
 ## :blue_book: Experiment Report 
 To check the reproducibility, we re-trained some models in the paper under slightly different environment, and log the training progress of them. 
 Some additional experiments are also conducted for further analysis, which can be found in this [:blue_book: ***EGformer Report***](https://api.wandb.ai/links/yuniw/21nqqyl8). 
@@ -156,6 +156,22 @@ Therefore, we initilize the weights of convolution layers in EGformer/Panoformer
 For example, to train using (S3D + Pano3D) data, set 'train_set' configuration as 'Concat'.
 
 🔔 NOTE: Current cleaned training codes are not tested for all cases. Let us know if there is any problem. Thank you.
+
+## 5. Visualization
+
+<img src="./visualization/Vis_demo.gif"  >
+
+To visualize the estimated depths using point cloud format as shown above, go to `visualization` folder & run the visulization code below.
+
+~~~bash
+cd visualization
+python vis_depth.py --img sample/S3D_img.png --depth sample\EGformer_depth.png
+~~~
+Modify `--img` and `--depth` configurations to visualize other samples. 
+
+`vis_depth.py` code is brought from this [repository](https://github.com/sunset1995/HoHoNet) and modified slightly for our experimental environment. 
+
+
 
 
 ## To do list
