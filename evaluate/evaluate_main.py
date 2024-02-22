@@ -73,7 +73,7 @@ def main_worker(gpu, ngpus_per_node, config):
     evaluation = Evaluation(
     	config,
         val_dataloader, 
-	    device)
+	    gpu)
     
     if config.method == "EGformer":
         evaluation.evaluate_egformer()

@@ -147,11 +147,11 @@ class Evaluation(object):
     def __init__(self,
                  config,
                  val_dataloader,
-                 device):
+                 gpu):
 
         self.val_dataloader = val_dataloader
         self.config = config
-        self.device = device
+        self.gpu = gpu
         # Some timers
         self.batch_time_meter = AverageMeter()
         # Some trackers
@@ -179,8 +179,7 @@ class Evaluation(object):
 
         print('Evaluating Panoformer')
         # Put the model in eval mode
-        torch.cuda.set_device(0)
-        self.gpu = int(self.config.gpu) 
+        torch.cuda.set_device(self.gpu)
         
         self.net = PanoBiT()
         self.net.cuda(self.gpu).eval()
@@ -267,8 +266,7 @@ class Evaluation(object):
         # Put the model in eval mode
         
         self.use_hybrid = False
-        torch.cuda.set_device(0)
-        self.gpu = int(self.config.gpu) 
+        torch.cuda.set_device(self.gpu)
         
         self.net = EGDepthModel(hybrid=self.use_hybrid)
 
