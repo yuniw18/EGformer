@@ -18,10 +18,19 @@ We'd like to thank the authors providing the codes.
 [23/09/27] Initialize repo & upload experiment report.<br> 
 [23/10/18] Upload inference/evaluation codes.<br> 
 [23/11/06] Upload training codes.<br> 
-[24/01/08] Upload visualization code. 
+[24/01/08] Upload visualization code.<br>
+[24/02/22] Upload codes for layout estimation.<br> 
+
+
 ## :blue_book: Experiment Report 
 To check the reproducibility, we re-trained some models in the paper under slightly different environment, and log the training progress of them. 
 Some additional experiments are also conducted for further analysis, which can be found in this [:blue_book: ***EGformer Report***](https://api.wandb.ai/links/yuniw/21nqqyl8). 
+
+## Layout estimation & Semantic segmentation
+If you want to test Layout estimation or Semantic segmentation tasks under our experimental setup, refer to the link below.
+ 
+ * [Layout estimation](./Layout_Estimation)
+ * Semantic segmentation
 
 ## 1. Setup
 
