@@ -1,0 +1,9 @@
+######################### EGformer ############################
+python3 evaluate_main.py --method EGformer  --eval_data Structure3D --checkpoint_path ../checkpoints/EGformer_layout/models/EGformer-40.pkl --S3D_path YOUR_DATA_PATH/Structured3D/test --world_size 1 --rank 0 --gpu 0  --output_path ./output_egformer_layout --output_json_path ./output_egformer_json --dist-url tcp://127.0.0.1:9993
+
+######################### Panoformer ############################
+python3 evaluate_main.py --method Panoformer  --eval_data Structure3D --checkpoint_path ../checkpoints/Panoformer_layout/models/Panoformer-40.pkl --S3D_path YOUR_DATA_PATH/Structured3D/test --world_size 1 --rank 0 --gpu 0  --dist-url tcp://127.0.0.1:9993 --output_path ./output_Panoformer
+
+
+
+
