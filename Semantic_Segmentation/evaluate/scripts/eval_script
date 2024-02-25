@@ -1,0 +1,15 @@
+# Table 3 #
+######################### EGformer ############################
+# S3d
+#python3 evaluate_main.py --method EGformer  --eval_data Structure3D --checkpoint_path ../checkpoints/EGformer_segmentation/models/EGformer-49.pkl --S3D_path YOUR_DATA_PATH/Structured3D/test --world_size 1 --rank 0 --gpu 3  --dist-url tcp://127.0.0.1:9993 --output_path ./output_EGformer
+
+
+######################### Panoformer ############################
+# S3D
+#python3 evaluate_main.py --method Panoformer  --eval_data Structure3D --checkpoint_path ../checkpoints/Panoformer_segmentation/models/Panoformer-49.pkl --S3D_path YOUR_DATA_PATH/Structured3D/test --world_size 1 --rank 0 --gpu 0  --dist-url tcp://127.0.0.1:9993 --output_path ./output_Panoformer
+
+
+
+
+
+
