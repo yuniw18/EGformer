@@ -20,6 +20,7 @@ We'd like to thank the authors providing the codes.
 [23/11/06] Upload training codes.<br> 
 [24/01/08] Upload visualization code.<br>
 [24/02/22] Upload codes for layout estimation.<br> 
+[24/02/25] Upload codes for semantic segmentation.<br> 
 
 
 ## :blue_book: Experiment Report 
@@ -30,7 +31,7 @@ Some additional experiments are also conducted for further analysis, which can b
 If you want to test Layout estimation or Semantic segmentation tasks under our experimental setup, refer to the link below.
  
  * [Layout estimation](./Layout_Estimation)
- * Semantic segmentation
+ * [Semantic segmentation](./Semantic_Segmentation)
 
 ## 1. Setup
 
