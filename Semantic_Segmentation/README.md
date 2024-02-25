@@ -50,7 +50,7 @@ bash scripts/eval_script
 ~~~
 
 When we train EGformer\Panopformer using scripts in 'train_scripts' above, we get results below.
-Under our experimental setup, Panoformer provide slightly better semantic segmantation results.
+Under this training setup, Panoformer provides slightly better semantic segmantation results.
 
 | Model               | mIoU | mACC | 
 |---------------------|--------------------------|---|
